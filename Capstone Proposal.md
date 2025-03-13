@@ -71,11 +71,13 @@ Libraries:
 
 ### Data
 
-There will be three tables in a single database
+There will be four tables in a single database
 
 Drugs table : primary key : drugId
 
-Pharmacy table: foriegn key : drugId ; relationship: one to many
+Pharmacy table: primary key : pharmId
+
+Pharmacy drugs table: foreign key : drugId, pharmId ; relationship: many to many
 
 Health tips: no relationship
 
@@ -113,11 +115,13 @@ name: Naproxen sodium
 
 **Get/pharmacies/:drugId**
 
-- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method
+- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method making use of google maps api and havesine function
 
 sample: Get /pharmacies?drugId=1
 
 **Get/pharmacies/:pharmId**
+
+- Get the details of the pharmacy selected by the pharmId such as contact details like phone number and email as well as address
 
 sample: Get /pharmacies?pharmId=1
 
