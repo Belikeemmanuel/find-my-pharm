@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../../assets/fonts/Lato-Regular.woff) format("woff");
+  src: url(../../assets/fonts/alternativefiles/Lato-Regular.woff2)
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../assets/fonts/Lato-Bold.woff) format("woff");
+  src: url(../../assets/fonts/alternativefiles/Lato-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../assets/fonts/Lato-Black.woff) format("woff");
+  src: url(../../assets/fonts/alternativefiles/Lato-Black.woff2) format("woff2");
+  font-weight: 900;
+  font-style: bolder;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../../assets/fonts/Outfit-Light.woff) format("woff");
+  src: url(../../assets/fonts/alternativefiles/Outfit-Light.woff2)
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../../assets/fonts/Outfit-Medium.woff) format("woff");
+  src: url(../../assets/fonts/alternativefiles/Outfit-Medium.woff2)
+    format("woff2");
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}

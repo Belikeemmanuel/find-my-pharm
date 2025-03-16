@@ -1,0 +1,7 @@
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  background-color: $background-primary;
+  display: flex;
+  padding: 16px;
+}

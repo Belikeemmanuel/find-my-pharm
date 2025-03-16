@@ -2,16 +2,14 @@ import { useState, useEffect } from "react";
 import { BACKEND_URL } from "../../config.js";
 import axios from "axios";
 
-const HealthTips = () => {
+function HealthTips() {
   const [tips, setTips] = useState([]);
   const [currentTips, setCurrentTips] = useState([]);
-  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // Fetch all health tips from the backend
     const fetchTips = async () => {
       try {
-        const response = await axios.get(`${BACKEND_URL}/health-tips`);
+        const response = await axios.get("/api/health-tips");
         setTips(response.data.healthTips);
         setCurrentTips(response.data.healthTips.slice(0, 2));
       } catch (error) {
@@ -21,13 +19,13 @@ const HealthTips = () => {
 
     fetchTips();
 
-    // Update tips every 24 hours (24 * 60 * 60 * 1000 ms)
+    let currentIndex = 0;
     const interval = setInterval(() => {
-      setIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 2) % tips.length;
-        setCurrentTips([tips[nextIndex], tips[(nextIndex + 1) % tips.length]]);
-        return nextIndex;
-      });
+      currentIndex = (currentIndex + 2) % tips.length;
+      setCurrentTips([
+        tips[currentIndex],
+        tips[(currentIndex + 1) % tips.length],
+      ]);
     }, 24 * 60 * 60 * 1000);
 
     return () => clearInterval(interval);
@@ -42,6 +40,6 @@ const HealthTips = () => {
       ))}
     </div>
   );
-};
+}
 
 export default HealthTips;

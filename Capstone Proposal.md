@@ -59,15 +59,15 @@ Libraries:
 
 #### Home Page
 
-![find my pharm home page](./assets/mock-up-homepage.png)
+![find my pharm home page](./src/assets/images/mock-up-homepage.png)
 
 #### Pharmacy List Page
 
-![list of pharmacies page](./assets/mock-up-pharm-list-page.png)
+![list of pharmacies page](./src/assets/images/mock-up-pharm-list-page.png)
 
 #### Single Pharmacy Page
 
-![Details of pharmacy](./assets/mock-up-pharm-details-page.png)
+![Details of pharmacy](./src/assets/images/mock-up-pharm-details-page.png)
 
 ### Data
 
