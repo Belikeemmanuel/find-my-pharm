@@ -1,7 +1,32 @@
 @use "../../styles/partials/variables" as *;
 
 .footer {
-  background-color: $background-primary;
+  background: linear-gradient(90deg, #004aad, #cb6ce6);
   display: flex;
-  padding: 16px;
+  flex-direction: column;
+  padding: 20px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+    &-text {
+      color: #ffffff;
+      font-family: $secondary-font;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    color: lightgray;
+    font-size: 10px;
+
+    &-link {
+      color: lightgray;
+      text-decoration: none;
+    }
+  }
 }

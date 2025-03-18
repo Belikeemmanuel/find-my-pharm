@@ -1,2 +1,15 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.home {
+  &__search {
+    background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+      url(../../assets/images/findmypharm-bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

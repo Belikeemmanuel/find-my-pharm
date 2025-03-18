@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BACKEND_URL } from "../../config.js";
 import axios from "axios";
+import hearticon from "../../assets/images/heart_check_16dp.png";
+import "./HealthTips.scss";
 
 function HealthTips() {
   const [tips, setTips] = useState([]);
   const [currentTips, setCurrentTips] = useState([]);
   const [message, setMessage] = useState("");
   const [lastFetchTime, setLastFetchTime] = useState(0);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    // Function to fetch tips
     const fetchTips = async () => {
       try {
         const response = await axios.get(`${BACKEND_URL}/health-tips`, {
@@ -23,20 +25,19 @@ function HealthTips() {
           // Set the new tips and update the last fetch time
           setTips(response.data.healthTips);
           setLastFetchTime(response.data.currentTime);
-          setMessage(""); // Clear any previous message
+          setMessage("");
         }
       } catch (error) {
         console.error("Error fetching health tips:", error);
       }
     };
 
-    // Fetch tips initially
     fetchTips();
 
     // Set an interval to fetch new tips after every 10 seconds
     const interval = setInterval(() => {
       fetchTips();
-    }, 10000); // 10 seconds in milliseconds
+    }, 10000);
 
     // Cleanup interval when component unmounts
     return () => clearInterval(interval);
@@ -48,13 +49,37 @@ function HealthTips() {
     }
   }, [tips]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Trigger re-render to retrigger animation
+          setCurrentTips([...tips.slice(0, 2)]);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, [tips]);
+
   return (
-    <div className="health-tips-container">
+    <div className="health-tips">
+      <h1 className="health-tips__header">Daily Health Tips</h1>
+      <img src={hearticon} alt="heart icon" className="health-tips__icon" />
       {currentTips.length > 0 ? (
         currentTips.map((tip, i) => (
-          <div key={i} className="health-tip">
-            {tip.tip}
-          </div>
+          <h2 key={`${tip.tip}-${i}`} className="health-tips__item">
+            - {tip.tip}
+          </h2>
         ))
       ) : (
         <p>Loading tips...</p>

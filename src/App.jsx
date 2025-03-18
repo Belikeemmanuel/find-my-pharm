@@ -10,13 +10,18 @@ import "./App.scss";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/pharmacies" element={<PharmacyListPage />} />
-        <Route path="/pharmacies/:pharmId" element={<PharmacyDetailsPage />} />
-      </Routes>
-      <Footer />
+      <div className="main">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pharmacies" element={<PharmacyListPage />} />
+          <Route
+            path="/pharmacies/:pharmId"
+            element={<PharmacyDetailsPage />}
+          />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

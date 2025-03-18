@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FooterIcon from "../FooterIcon/FooterIcon.jsx";
 import "./Footer.scss";
 
 function Footer() {
   return (
     <div className="footer">
+      <div className="footer__top">
+        <h3 className="footer__top-text">Follow us @ </h3>
+        <FooterIcon />
+      </div>
       <p className="footer__bottom">
         &copy; 2024 Snaps{" "}
         <Link to="" className="footer__bottom-link">

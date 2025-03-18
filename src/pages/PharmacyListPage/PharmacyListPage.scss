@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.pharmacy-list {
+  &__header {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+  }
+  &__title {
+    font-family: $secondary-font;
+  }
+}
+.back-arrow {
+  width: 35px;
+}
