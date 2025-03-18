@@ -81,7 +81,7 @@ function PharmacyListPage() {
       {pharmacies.length === 0 ? (
         <p>No pharmacies found for this drug.</p>
       ) : (
-        <ul>
+        <div className="pharmacy-list__items">
           {pharmacies.map((pharmacy) => (
             <Link
               to={`/pharmacies/${pharmacy.pharmId}`}
@@ -97,7 +97,7 @@ function PharmacyListPage() {
               )}
             </Link>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
