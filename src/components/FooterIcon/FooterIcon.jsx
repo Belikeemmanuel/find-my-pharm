@@ -48,7 +48,6 @@ function FooterIcon() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 1668.56 1221.19"
           viewBox="0 0 1668.56 1221.19"
           id="twitter-x"
           className="icon-image icon-image--twitter"

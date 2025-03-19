@@ -1,0 +1,75 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.pharmacy-details {
+  padding: 20px;
+  height: 80vh;
+  background-color: lightgrey;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__back-button {
+    display: flex;
+    width: 30%;
+  }
+  &__back-arrow-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back-text {
+    font-size: 28px;
+    color: $background-primary;
+    padding-left: 5px;
+  }
+
+  &__home-icon-link {
+    height: 45px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+    background: linear-gradient(
+        rgba(50, 50, 50, 0.502),
+        rgba(11, 11, 11, 0.716)
+      ),
+      url(../../assets/images/pharmacy-front.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 20px;
+    height: 70%;
+    color: lightgray;
+  }
+
+  &__header {
+    padding-bottom: 20px;
+  }
+
+  &__timestamp {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+span {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #7428ea;
+  font-weight: bold;
+}
+
+.home-icon {
+  width: 45px;
+}

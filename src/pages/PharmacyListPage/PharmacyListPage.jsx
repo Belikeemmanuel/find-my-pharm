@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import backarrow from "../../assets/images/arrow_back_16.png";
+import rightarrow from "../../assets/images/chevron_right_16.png";
 import axios from "axios";
 import "./PharmacyListPage.scss";
 import { BACKEND_URL } from "../../config";
@@ -84,17 +85,20 @@ function PharmacyListPage() {
         <div className="pharmacy-list__items">
           {pharmacies.map((pharmacy) => (
             <Link
-              to={`/pharmacies/${pharmacy.pharmId}`}
+              to={`/pharmacies/${pharmacy.pharmId}?drugId=${drugId}`}
               key={pharmacy.pharmId}
               className="pharmacy-list__card"
             >
-              <h3 className="pharmacy-list__name">{pharmacy.name}</h3>
-              <p className="pharmacy-list__address">
-                Address: {pharmacy.address}
-              </p>
-              {pharmacy.distanceText && (
-                <p>Distance: {pharmacy.distanceText}</p>
-              )}
+              <div>
+                <h3 className="pharmacy-list__name">{pharmacy.name}</h3>
+                <p className="pharmacy-list__address">
+                  Address: {pharmacy.address}
+                </p>
+                {pharmacy.distanceText && (
+                  <p>Distance: {pharmacy.distanceText}</p>
+                )}
+              </div>
+              <img src={rightarrow} alt="right arrow" className="right-arrow" />
             </Link>
           ))}
         </div>
