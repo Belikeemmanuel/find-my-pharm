@@ -33,23 +33,25 @@
   &__card {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     margin-top: 10px;
     background: linear-gradient(
-        rgba(50, 50, 50, 0.502),
-        rgba(11, 11, 11, 0.716)
+        rgba(41, 60, 117, 0.916),
+        rgba(11, 11, 11, 0.796)
       ),
       url(../../assets/images/pharmacy-front.png);
     background-position: center;
     background-size: cover;
     border-radius: 20px;
     padding: 20px;
-    height: 70%;
+    padding-bottom: 35px;
+    height: 85%;
+    margin: 10px 0px;
     color: lightgray;
   }
 
   &__header {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   &__timestamp {
@@ -66,7 +68,7 @@ a {
 span {
   font-size: 20px;
   margin-right: 10px;
-  color: #7428ea;
+  color: #ba8dfc;
   font-weight: bold;
 }
 
