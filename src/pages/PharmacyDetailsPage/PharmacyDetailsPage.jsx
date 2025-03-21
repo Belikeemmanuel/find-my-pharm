@@ -5,6 +5,7 @@ import { BACKEND_URL } from "../../config";
 import backarrow from "../../assets/images/arrow_back_16.png";
 import homeicon from "../../assets/images/home_16.png";
 import { useParams, useSearchParams, Link } from "react-router-dom";
+import RatingPharm from "../../components/RatingPharm/RatingPharm";
 
 function PharmacyDetailsPage() {
   const [pharmacy, setPharmacy] = useState(null);
@@ -116,6 +117,7 @@ function PharmacyDetailsPage() {
             "Not available"
           )}
         </p>
+        <RatingPharm pharmId={pharmId} />
       </div>
     </div>
   );
