@@ -11,7 +11,7 @@ function Footer() {
         <FooterIcon />
       </div>
       <p className="footer__bottom">
-        &copy; 2024 Snaps{" "}
+        &copy; 2025 Pharms{" "}
         <Link to="" className="footer__bottom-link">
           . Terms
         </Link>{" "}

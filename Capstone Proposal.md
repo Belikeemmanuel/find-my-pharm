@@ -125,6 +125,10 @@ sample: Get /pharmacies?drugId=1
 
 sample: Get /pharmacies?pharmId=1
 
+**Post/pharmacies/:pharmId/rate**
+
+- Post the rating of a particular pharmacy, 1-5 star rating and the amount of reviews based on the number of times the pharmacy was rated will be stored in each pharmacy backend
+
 ## Roadmap
 
 - Initialize the project with a clear folder structure.
@@ -139,6 +143,7 @@ sample: Get /pharmacies?pharmId=1
 - implement GET request to get health tips
 - implement GET request to get list of pharmacies close to user with drug available
 - implement GET request to get pharmacies details by id of pharmacy selected
+- implement POST request to post ratings and ratings count of pharmacies to backend
 
 **FRONTEND**
 

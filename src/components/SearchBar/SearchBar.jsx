@@ -62,7 +62,7 @@ function SearchBar() {
         </div>
         <label className="search__text">
           <h2 className="search__header-text">
-            Hello! What drug are you looking for?
+            Hello! What medications are you looking for?
           </h2>
           <input
             type="text"
