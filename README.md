@@ -150,7 +150,10 @@ sample: Get /pharmacies?pharmId=1
 - DEMO DAY
 
 ---
+## Installation Notes
+- This web application is for mobile view, as a future implementation a tablet and desktop breakpoint will be added.
 
+  
 ## Future Implementations
 
 - user login and authentication page
