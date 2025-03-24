@@ -161,4 +161,5 @@ sample: Get /pharmacies?pharmId=1
 - discount for drugs
 - access to healthcare professionals or set family doctor emergency line
 - reminder for drug consumption schedule.
+- build another page for admins that would have smaller pharmacies use the application to keep records of their medications so at the end of the day it uploads the available medicatons to the findmypharm server backend
 
