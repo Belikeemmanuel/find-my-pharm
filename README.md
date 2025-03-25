@@ -7,7 +7,6 @@ FindMyPharm is an application built to help users locate their desired drugs and
 ### Problem Space
 
 Most pharmacies always have the drugs which are in high demand available and so sometimes fail to make provision for drugs which are not in demand which is mostly undestandable from an economical standpoint but when a user is in need of a drug which is not often in demand and cannot purchase the drug or rather has no idea on where to go about looking for the drug, the urgency presents itself where the user needs a drug and is at loss on how to find it.
-
 FindMyPharm aims to eliminate that problem and bridge the gap between the user and the pharmacies with the drugs readily available by providing the user with a find one find all application that generates a list of pharmacies with said drugs and the pharmacies contact details as well as route to closest pharmacies and the ability to rate pharmacies based on interactions with the pharmacies
 
 ### User Profile
@@ -158,6 +157,10 @@ sample: Get /pharmacies?pharmId=1
 
 ---
 
+## Installation Notes
+- This web application is for mobile view, as a future implementation a tablet and desktop breakpoint will be added.
+
+
 ## Future Implementations
 
 - user login and authentication page
@@ -165,3 +168,5 @@ sample: Get /pharmacies?pharmId=1
 - discount for drugs
 - access to healthcare professionals or set family doctor emergency line
 - reminder for drug consumption schedule.
+- build another page for admins that would have smaller pharmacies use the application to keep records of their medications so at the end of the day it uploads the available medicatons to the findmypharm server backend
+
