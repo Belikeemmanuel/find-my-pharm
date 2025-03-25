@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .pharmacy-details {
-  padding: 20px;
+  padding: 1.25rem;
   height: 80vh;
   background-color: lightgrey;
 
@@ -21,20 +21,20 @@
   }
 
   &__back-text {
-    font-size: 28px;
+    font-size: 1.75rem;
     color: $background-primary;
-    padding-left: 5px;
+    padding-left: 0.3125rem;
   }
 
   &__home-icon-link {
-    height: 45px;
+    height: 2.8125rem;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-top: 10px;
+    gap: 1.5625rem;
+    margin-top: 0.625rem;
     background: linear-gradient(
         rgba(41, 60, 117, 0.916),
         rgba(11, 11, 11, 0.796)
@@ -42,17 +42,17 @@
       url(../../assets/images/pharmacy-front.png);
     background-position: center;
     background-size: cover;
-    border-radius: 20px;
-    padding: 20px;
-    padding-bottom: 40px;
-    padding-top: 10px;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    padding-bottom: 2.5rem;
+    padding-top: 0.625rem;
     height: 90%;
-    margin: 10px 0px;
+    margin: 0.625rem 0rem;
     color: lightgray;
   }
 
   &__header {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
 
   &__timestamp {
@@ -67,12 +67,12 @@ a {
 }
 
 span {
-  font-size: 20px;
-  margin-right: 10px;
+  font-size: 1.25rem;
+  margin-right: 0.625rem;
   color: #ba8dfc;
   font-weight: bold;
 }
 
 .home-icon {
-  width: 45px;
+  width: 2.8125rem;
 }
