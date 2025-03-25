@@ -1,0 +1,78 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.pharmacy-details {
+  padding: 1.25rem;
+  height: 80vh;
+  background-color: lightgrey;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__back-button {
+    display: flex;
+    width: 30%;
+  }
+  &__back-arrow-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back-text {
+    font-size: 1.75rem;
+    color: $background-primary;
+    padding-left: 0.3125rem;
+  }
+
+  &__home-icon-link {
+    height: 2.8125rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    margin-top: 0.625rem;
+    background: linear-gradient(
+        rgba(41, 60, 117, 0.916),
+        rgba(11, 11, 11, 0.796)
+      ),
+      url(../../assets/images/pharmacy-front.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    padding-bottom: 2.5rem;
+    padding-top: 0.625rem;
+    height: 90%;
+    margin: 0.625rem 0rem;
+    color: lightgray;
+  }
+
+  &__header {
+    padding-bottom: 0.625rem;
+  }
+
+  &__timestamp {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+span {
+  font-size: 1.25rem;
+  margin-right: 0.625rem;
+  color: #ba8dfc;
+  font-weight: bold;
+}
+
+.home-icon {
+  width: 2.8125rem;
+}

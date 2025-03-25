@@ -7,7 +7,6 @@ FindMyPharm is an application built to help users locate their desired drugs and
 ### Problem Space
 
 Most pharmacies always have the drugs which are in high demand available and so sometimes fail to make provision for drugs which are not in demand which is mostly undestandable from an economical standpoint but when a user is in need of a drug which is not often in demand and cannot purchase the drug or rather has no idea on where to go about looking for the drug, the urgency presents itself where the user needs a drug and is at loss on how to find it.
-
 FindMyPharm aims to eliminate that problem and bridge the gap between the user and the pharmacies with the drugs readily available by providing the user with a find one find all application that generates a list of pharmacies with said drugs and the pharmacies contact details as well as route to closest pharmacies and the ability to rate pharmacies based on interactions with the pharmacies
 
 ### User Profile
@@ -59,15 +58,15 @@ Libraries:
 
 #### Home Page
 
-![find my pharm home page](./assets/mock-up-homepage.png)
+![find my pharm home page](./src/assets/images/mock-up-homepage.png)
 
 #### Pharmacy List Page
 
-![list of pharmacies page](./assets/mock-up-pharm-list-page.png)
+![list of pharmacies page](./src/assets/images/mock-up-pharm-list-page.png)
 
 #### Single Pharmacy Page
 
-![Details of pharmacy](./assets/mock-up-pharm-details-page.png)
+![Details of pharmacy](./src/assets/images/mock-up-pharm-details-page.png)
 
 ### Data
 
@@ -75,7 +74,7 @@ There will be four tables in a single database
 
 Drugs table : primary key : drugId
 
-Pharmacy table: primary key : pharmId 
+Pharmacy table: primary key : pharmId
 
 Pharmacy drugs table: foreign key : drugId, pharmId ; relationship: many to many
 
@@ -115,13 +114,19 @@ name: Naproxen sodium
 
 **Get/pharmacies/:drugId**
 
-- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method
+- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method making use of google maps api and havesine function
 
 sample: Get /pharmacies?drugId=1
 
 **Get/pharmacies/:pharmId**
 
+- Get the details of the pharmacy selected by the pharmId such as contact details like phone number and email as well as address
+
 sample: Get /pharmacies?pharmId=1
+
+**Post/pharmacies/:pharmId/rate**
+
+- Post the rating of a particular pharmacy, 1-5 star rating and the amount of reviews  based on the number of times the pharmacy was rated will be stored in each pharmacy backend
 
 ## Roadmap
 
@@ -137,6 +142,7 @@ sample: Get /pharmacies?pharmId=1
 - implement GET request to get health tips
 - implement GET request to get list of pharmacies close to user with drug available
 - implement GET request to get pharmacies details by id of pharmacy selected
+- implement POST request to post ratings and ratings count of pharmacies to backend
 
 **FRONTEND**
 
@@ -150,10 +156,11 @@ sample: Get /pharmacies?pharmId=1
 - DEMO DAY
 
 ---
+
 ## Installation Notes
 - This web application is for mobile view, as a future implementation a tablet and desktop breakpoint will be added.
 
-  
+
 ## Future Implementations
 
 - user login and authentication page

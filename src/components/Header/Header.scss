@@ -1,0 +1,14 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background-color: $background-primary;
+  display: flex;
+  padding: 1rem;
+
+  &-link {
+    width: 50%;
+  }
+  &-logo {
+    width: 70%;
+  }
+}

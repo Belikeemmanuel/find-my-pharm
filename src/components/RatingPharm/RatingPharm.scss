@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/keyframes" as *;
+
+.star-rating {
+  display: flex;
+  gap: 0.3125rem;
+  font-size: 1.1875rem;
+
+  .filled {
+    color: #ba8dfc;
+  }
+}

@@ -1,0 +1,80 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/keyframes" as *;
+@use "../../styles/partials/variables" as *;
+
+.search {
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  &__icon-div {
+    position: absolute;
+    top: -2.8125rem;
+    right: 10rem;
+  }
+  &__icon {
+    position: relative;
+    animation: rotate 2s linear infinite;
+    width: 3.75rem;
+  }
+
+  &__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+  }
+  &__header-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.125rem solid black;
+    width: 0;
+    font-size: 1.25rem;
+
+    animation: typing $typeSpeed steps(40) forwards,
+      blink $cursorBlinkSpeed step-end infinite;
+  }
+
+  &__header-input {
+    height: 2.25rem;
+    border-radius: 3.125rem;
+    padding: 0.75rem;
+    font-family: $secondary-font;
+    border: 0rem;
+    width: 90%;
+  }
+  &__suggestions {
+    position: absolute;
+    top: calc(100% + 1px); // Position directly below input
+    left: 0;
+    width: 100%; // Same width as input field
+    background-color: white;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 9.375rem;
+    overflow-y: auto;
+    margin-top: 0.125rem;
+  }
+
+  .suggestion-item {
+    padding: 0.625rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &__error-message {
+    padding: 0.625rem 0rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $background-primary;
+  }
+}

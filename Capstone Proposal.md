@@ -59,23 +59,25 @@ Libraries:
 
 #### Home Page
 
-![find my pharm home page](./assets/mock-up-homepage.png)
+![find my pharm home page](./src/assets/images/mock-up-homepage.png)
 
 #### Pharmacy List Page
 
-![list of pharmacies page](./assets/mock-up-pharm-list-page.png)
+![list of pharmacies page](./src/assets/images/mock-up-pharm-list-page.png)
 
 #### Single Pharmacy Page
 
-![Details of pharmacy](./assets/mock-up-pharm-details-page.png)
+![Details of pharmacy](./src/assets/images/mock-up-pharm-details-page.png)
 
 ### Data
 
-There will be three tables in a single database
+There will be four tables in a single database
 
 Drugs table : primary key : drugId
 
-Pharmacy table: foriegn key : drugId ; relationship: one to many
+Pharmacy table: primary key : pharmId
+
+Pharmacy drugs table: foreign key : drugId, pharmId ; relationship: many to many
 
 Health tips: no relationship
 
@@ -113,13 +115,19 @@ name: Naproxen sodium
 
 **Get/pharmacies/:drugId**
 
-- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method
+- Get a list of pharmacies with the selected drug by the user using the drug id and user location as a sort or filter method making use of google maps api and havesine function
 
 sample: Get /pharmacies?drugId=1
 
 **Get/pharmacies/:pharmId**
 
+- Get the details of the pharmacy selected by the pharmId such as contact details like phone number and email as well as address
+
 sample: Get /pharmacies?pharmId=1
+
+**Post/pharmacies/:pharmId/rate**
+
+- Post the rating of a particular pharmacy, 1-5 star rating and the amount of reviews based on the number of times the pharmacy was rated will be stored in each pharmacy backend
 
 ## Roadmap
 
@@ -135,6 +143,7 @@ sample: Get /pharmacies?pharmId=1
 - implement GET request to get health tips
 - implement GET request to get list of pharmacies close to user with drug available
 - implement GET request to get pharmacies details by id of pharmacy selected
+- implement POST request to post ratings and ratings count of pharmacies to backend
 
 **FRONTEND**
 

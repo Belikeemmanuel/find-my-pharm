@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/keyframes" as *;
+@use "../../styles/partials/variables" as *;
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 40%;
+  margin-left: 2.5rem;
+
+  &-link {
+    width: 100%;
+  }
+
+  &-image {
+    &--twitter {
+      width: 2rem;
+    }
+    &--insta {
+      width: 1.5625rem;
+    }
+    &--facebook {
+      width: 1.5625rem;
+    }
+  }
+}
